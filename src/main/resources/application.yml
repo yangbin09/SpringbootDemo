@@ -8,6 +8,19 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  #thymeleaf 模版前缀，默认值,可选项
+  thymeleaf:
+    prefix:
+      classpath: /templates/
+    #thymeleaf 模版后缀，默认值,可选项
+    suffix: .html
+    cache: false
+    encoding: utf-8
+  kafka:
+    bootstrap-servers: ip:端口
+    consumer.group-id: consumer-group
+
+
 
 # mybatis-plus Config
 mybatis-plus:

@@ -115,7 +115,17 @@
             <optional>true</optional>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+
     </dependencies>
+
 
     <build>
         <plugins>
@@ -124,6 +134,26 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>static/**/*.woff</exclude>
+                    <exclude>static/**/*.woff2</exclude>
+                    <exclude>static/**/*.ttf</exclude>
+                </excludes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>false</filtering>
+                <includes>
+                    <include>static/**/*.woff</include>
+                    <include>static/**/*.woff2</include>
+                    <include>static/**/*.ttf</include>
+                </includes>
+            </resource>
+        </resources>
     </build>
     <repositories>
         <repository>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>第一个Vue应用</title>
+</head>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="/css/element-ui.css">
+
+<!-- 引入开发版本的Vue框架 -->
+<script src="/js/vue.js" ></script>
+
+<!-- 引入组件库 -->
+<script src="/js/element-index.js"></script>
+<link rel="stylesheet" href="/css/fonts/iconfont.css">
+
+<body>
+<div id="app">
+    <!-- 4.id="app"的div中，可以直接使用Vue实例的数据 -->
+    <h2>msg1: {{ message }} </h2>
+    <h2>msg1: {{ message2 }} </h2>
+    <i class="el-icon-edit"></i>
+    <i class="el-icon-share"></i>
+    <i class="el-icon-delete"></i>
+    <span class="iconfont icon-add"></span>
+
+    <el-button type="primary" >搜索</el-button>
+
+    <el-switch
+            v-model="value1"
+            active-text="按月付费"
+            inactive-text="按年付费">
+    </el-switch>
+    <el-switch
+            style="display: block"
+            v-model="value2"
+            active-color="#13ce66"
+            inactive-color="#ff4949"
+            active-text="按月付费"
+            inactive-text="按年付费">
+    </el-switch>
+</div>
+
+
+<script>
+    // 1.创建一个Vue实例
+    const app = new Vue({
+        // 2.el(element缩写)：将实例挂载到id=app的div上
+        el: "#app",
+        // 3.data：声明使用的数据
+        data: {
+            message: "hello vue!",
+            message2: "hello vue!2",
+            value1: true,
+            value2: true
+        }
+    })
+</script>
+</body>
+</html>

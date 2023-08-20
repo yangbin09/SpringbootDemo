@@ -1,4 +1,4 @@
-package com.atyang.springdemo.utlis.result.config;
+package com.atyang.springdemo.utlis.config;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
