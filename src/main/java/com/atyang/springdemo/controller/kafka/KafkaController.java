@@ -28,7 +28,7 @@ public class KafkaController {
     public Result findAll() {
 
 
-        return Result.ok("kafkaInfo");
+        return Result.ok("kafkaInfo1");
     }
 
 
